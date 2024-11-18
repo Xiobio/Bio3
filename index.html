@@ -6,11 +6,10 @@
     <title>Unity WebGL Player | Biosphere3</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
-    <script src="https://unpkg.com/@tonconnect/ui@latest/dist/tonconnect-ui.min.js"></script>
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=960 height=600 tabindex="-1"></canvas>
+      <canvas id="unity-canvas" width=390 height=844 tabindex="-1"></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
@@ -24,14 +23,8 @@
         <div id="unity-build-title">Biosphere3</div>
       </div>
     </div>
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script>
-      const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
-        manifestUrl: 'https://prediction-market-coral.vercel.app/tonconnect-manifest.json',
-        // buttonRootId: 'ton-connect'
-      });
-    </script>
-    <script>
+
       var container = document.querySelector("#unity-container");
       var canvas = document.querySelector("#unity-canvas");
       var loadingBar = document.querySelector("#unity-loading-bar");
@@ -101,8 +94,8 @@
       } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
 
-        canvas.style.width = "960px";
-        canvas.style.height = "600px";
+        canvas.style.width = "390px";
+        canvas.style.height = "844px";
       }
 
       loadingBar.style.display = "block";
@@ -117,7 +110,6 @@
                 fullscreenButton.onclick = () => {
                   unityInstance.SetFullscreen(1);
                 };
-                window.unityInstance = unityInstance;
               }).catch((message) => {
                 alert(message);
               });
