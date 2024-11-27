@@ -9,7 +9,7 @@
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=375 height=667 tabindex="-1"></canvas>
+      <canvas id="unity-canvas" width=960 height=600 tabindex="-1"></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
@@ -52,12 +52,12 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/webgl_aeon.loader.js";
+      var loaderUrl = buildUrl + "/webgl_11.27.loader.js";
       var config = {
         arguments: [],
-        dataUrl: buildUrl + "/webgl_aeon.data.unityweb",
-        frameworkUrl: buildUrl + "/webgl_aeon.framework.js.unityweb",
-        codeUrl: buildUrl + "/webgl_aeon.wasm.unityweb",
+        dataUrl: buildUrl + "/webgl_11.27.data",
+        frameworkUrl: buildUrl + "/webgl_11.27.framework.js",
+        codeUrl: buildUrl + "/webgl_11.27.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "Biosphere3",
@@ -98,8 +98,8 @@
 
       } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
-        canvas.style.width = "375px";
-        canvas.style.height = "667px";
+        canvas.style.width = "960px";
+        canvas.style.height = "600px";
       }
 
       document.querySelector("#unity-loading-bar").style.display = "block";
